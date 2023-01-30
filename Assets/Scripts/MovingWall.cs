@@ -24,6 +24,7 @@ public class MovingWall : MonoBehaviour
             var position = transform.position;
             position.x -= distance-maxDistance;
             transform.position = position;
+            GameManager.NextLevel();
         }
     }
 }
