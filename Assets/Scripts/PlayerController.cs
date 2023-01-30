@@ -74,7 +74,7 @@ public class PlayerController : KinematicObject
     public float wallCheckBottomPadding = 0.1f;
         
     bool touchingWallLeft;
-    bool touchingWall = false;
+    public bool touchingWall = false;
 
 
     public Bounds Bounds => collider2d.bounds;

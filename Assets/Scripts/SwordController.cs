@@ -47,6 +47,11 @@ public class SwordController : MonoBehaviour
     /// </summary>
     bool ballHasBeenHitThisTime = false;
 
+    /// <summary>
+    /// Whether or not ball is trapped in this frame.
+    ///</summary>
+    bool trappedBall = false;
+
     public GameObject player;
 
     private void OnDrawGizmos()
@@ -77,7 +82,9 @@ public class SwordController : MonoBehaviour
                 hit.transform.GetComponent<Rigidbody2D>().AddForce(((hit.transform.position - this.transform.position) + (player.transform.right) * forwardForce).normalized * kickHitForce, ForceMode2D.Impulse);
             }
 
-            if(!ballHasBeenHitThisTime && Input.GetButton("Trap"))
+            var playerController = player.GetComponent<PlayerController>();
+
+            if(!ballHasBeenHitThisTime && Input.GetButton("Trap") && (playerController.jumpState != PlayerController.JumpState.Grounded && !playerController.touchingWall))
             {
                 ballHasBeenHitThisTime = true;
                 hit.transform.parent = player.transform.GetChild(0).transform;
@@ -85,12 +92,30 @@ public class SwordController : MonoBehaviour
                 hit.transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 hit.transform.GetComponent<Rigidbody2D>().isKinematic = true;
                 hit.transform.GetComponent<CircleCollider2D>().isTrigger = true;
+                trappedBall = true;
             }
-            if(ballHasBeenHitThisTime && Input.GetButtonUp("Trap"))
-            {
-                hit.transform.parent = null;
-                hit.transform.GetComponent<Rigidbody2D>().isKinematic = false;
-                hit.transform.GetComponent<CircleCollider2D>().isTrigger = false;
+            if(trappedBall){
+                if (playerController.jumpState == PlayerController.JumpState.Grounded || playerController.touchingWall)
+                {
+                    hit.transform.parent = null;
+                    hit.transform.GetComponent<Rigidbody2D>().isKinematic = false;
+                    hit.transform.GetComponent<CircleCollider2D>().isTrigger = false;
+                    trappedBall = false;
+                }else if(ballHasBeenHitThisTime && Input.GetButtonDown("Kick"))
+                {
+                    ballHasBeenHitThisTime = true;
+                    hit.transform.parent = null;
+                    hit.transform.GetComponent<Rigidbody2D>().isKinematic = false;
+                    hit.transform.GetComponent<CircleCollider2D>().isTrigger = false;
+                    hit.transform.GetComponent<Rigidbody2D>().AddForce(((hit.transform.position - this.transform.position) + (player.transform.right) * forwardForce).normalized * kickHitForce, ForceMode2D.Impulse);
+                    trappedBall = false;
+                }else if(ballHasBeenHitThisTime && Input.GetButtonUp("Trap"))
+                {
+                    hit.transform.parent = null;
+                    hit.transform.GetComponent<Rigidbody2D>().isKinematic = false;
+                    hit.transform.GetComponent<CircleCollider2D>().isTrigger = false;
+                    trappedBall = false;
+                }
             }
             
         }
