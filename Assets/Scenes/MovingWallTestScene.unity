@@ -619,6 +619,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7298262409502300303, guid: 887e786786a5c2546b749076022e1634, type: 3}
   m_PrefabInstance: {fileID: 7298262409859368844}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1317366082 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7298262409502300301, guid: 887e786786a5c2546b749076022e1634, type: 3}
+  m_PrefabInstance: {fileID: 7298262409859368844}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1317366086
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317366082}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1320776706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,9 +1244,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 22139959513455137, guid: 420d5704869dc6e4bbc967852e093e26, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1277244131553096737, guid: 420d5704869dc6e4bbc967852e093e26, type: 3}
       propertyPath: m_Name
       value: Moving Platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 1277244131553096737, guid: 420d5704869dc6e4bbc967852e093e26, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1277244131553096738, guid: 420d5704869dc6e4bbc967852e093e26, type: 3}
       propertyPath: m_RootOrder
@@ -1285,11 +1319,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2622578639445141240, guid: 902a2ad1747ebc84188f7bd16359eb6f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 10.35
       objectReference: {fileID: 0}
     - target: {fileID: 2622578639445141240, guid: 902a2ad1747ebc84188f7bd16359eb6f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2622578639445141240, guid: 902a2ad1747ebc84188f7bd16359eb6f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1335,6 +1369,10 @@ PrefabInstance:
     - target: {fileID: 7298262409502300301, guid: 887e786786a5c2546b749076022e1634, type: 3}
       propertyPath: m_Name
       value: Moving Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 7298262409502300301, guid: 887e786786a5c2546b749076022e1634, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7298262409502300301, guid: 887e786786a5c2546b749076022e1634, type: 3}
       propertyPath: m_TagString
