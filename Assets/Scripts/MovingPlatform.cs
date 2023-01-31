@@ -13,7 +13,6 @@ public class MovingPlatform : MonoBehaviour
     private bool counting = false;
     private int dir = 1;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +42,17 @@ public class MovingPlatform : MonoBehaviour
             }
         }
         transform.Translate(velocity*Time.deltaTime,0f,0f);
-        Debug.Log(velocity);
+        
+    }
+
+    void OnTriggerEnter2D(Collider2D c)
+    {
+        if(c.gameObject.tag == "Floor") return;
+        c.gameObject.transform.parent = transform;
+    }
+    void OnTriggerExit2D(Collider2D c)
+    {
+        if(c.gameObject.tag == "Floor") return;
+        c.gameObject.transform.parent = null;
     }
 }

@@ -1441,6 +1441,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 7739585165413286405, guid: 996059c8601daad46a9d6a91af513539, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8585481224163257375, guid: 996059c8601daad46a9d6a91af513539, type: 3}
       propertyPath: m_Enabled
       value: 0
