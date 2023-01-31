@@ -9,6 +9,8 @@ TagManager:
   - Goal
   - Ball
   - Game Manager
+  - OuterBounds
+  - Blockade
   layers:
   - Default
   - TransparentFX

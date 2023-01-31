@@ -5,13 +5,15 @@ using UnityEngine;
 
 public class LoseState : MonoBehaviour
 {
+    public Rigidbody2D rb;
+
     //Number of bounces on the ground
     private int bounceLimit = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -35,6 +37,18 @@ public class LoseState : MonoBehaviour
                 //If the GameObject has the same tag as specified, output this message in the console
                 Debug.Log("Resetted Bounce Limit");
             Debug.Log("Bounce Limit:" + bounceLimit);
+        }
+
+        if (col.gameObject.tag == "Blockade")
+            rb.velocity = new Vector3(0,0,0);
+
+    }
+
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "OuterBounds")
+        {
+            SceneManager.LoadScene("GameOver");
         }
     }
 }

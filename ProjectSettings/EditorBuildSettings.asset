@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MovingWallTestScene.unity
     guid: e8644118dba5f23499687ae7f860adad
+  - enabled: 1
+    path: Assets/Scenes/LevelOne.unity
+    guid: bc23649dfe1aa3a41abffe572e3a378b
   m_configObjects: {}

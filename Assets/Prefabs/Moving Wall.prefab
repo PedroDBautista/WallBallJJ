@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7298262409502300302}
   - component: {fileID: 7298262409502300297}
   - component: {fileID: 7298262409502300296}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Moving Wall
-  m_TagString: Floor
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

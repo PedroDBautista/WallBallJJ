@@ -1336,6 +1336,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Moving Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 7298262409502300301, guid: 887e786786a5c2546b749076022e1634, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 7298262409502300303, guid: 887e786786a5c2546b749076022e1634, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1436,6 +1440,10 @@ PrefabInstance:
     - target: {fileID: 7739585165413286405, guid: 996059c8601daad46a9d6a91af513539, type: 3}
       propertyPath: m_Name
       value: Ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585481224163257375, guid: 996059c8601daad46a9d6a91af513539, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 996059c8601daad46a9d6a91af513539, type: 3}

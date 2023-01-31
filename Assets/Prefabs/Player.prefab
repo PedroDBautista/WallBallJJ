@@ -162,11 +162,12 @@ MonoBehaviour:
   WallJumpYVelocity: 10
   whatIsWall:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 192
   wallCheckRayCount: 3
   wallCheckRayDistance: 0.4
   wallCheckTopPadding: 0.1
   wallCheckBottomPadding: 0.1
+  touchingWall: 0
 --- !u!114 &2622578639445141235
 MonoBehaviour:
   m_ObjectHideFlags: 0
