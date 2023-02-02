@@ -46,4 +46,11 @@ public class GameManager : MonoBehaviour
     {
         INSTANCE.currentUnlockedLevel += 1;
     }
+
+    public static void OpenLevel(int levelID)
+    {
+        if(levelID >= INSTANCE.levels.Length) return;
+
+        SceneManager.LoadScene(INSTANCE.levels[levelID]);
+    }
 }
