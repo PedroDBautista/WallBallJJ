@@ -11,6 +11,7 @@ TagManager:
   - Game Manager
   - OuterBounds
   - Blockade
+  - Moving Platform
   layers:
   - Default
   - TransparentFX

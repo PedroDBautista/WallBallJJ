@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Audio/SX/Hit_Bonus_Item.wav.meta
+guid: 93a37d7f2d18ca94fba1f6ad8cb7fd87
+=======
+guid: 0af252cad4d210040bc1ee3901cb7946
+>>>>>>> 003565b0238f5c7b5c7ea5428c6a76faa4f0d5ef:Assets/Audio/FX/Hit_Bonus_Item.wav.meta
+AudioImporter:
+  externalObjects: {}
+  serializedVersion: 6
+  defaultSettings:
+    loadType: 0
+    sampleRateSetting: 0
+    sampleRateOverride: 44100
+    compressionFormat: 1
+    quality: 1
+    conversionMode: 0
+  platformSettingOverrides: {}
+  forceToMono: 0
+  normalize: 1
+  preloadAudioData: 1
+  loadInBackground: 0
+  ambisonic: 0
+  3D: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

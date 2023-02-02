@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 93a37d7f2d18ca94fba1f6ad8cb7fd87
+<<<<<<< HEAD:Assets/Audio/SX/Kick_04.wav.meta
+guid: f0433483f5a047b4592d9bd962a3e691
+=======
+guid: 6d35465d1208a0a4187da4132059e760
+>>>>>>> 003565b0238f5c7b5c7ea5428c6a76faa4f0d5ef:Assets/Audio/FX/Kick_04.wav.meta
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6

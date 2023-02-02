@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Audio/SX/Hit_Metal_03.wav.meta
+guid: c1f675503cec26649b4d1a25062d6c12
+=======
+guid: 7e42d037de6698242af8e7aba2c63295
+>>>>>>> 003565b0238f5c7b5c7ea5428c6a76faa4f0d5ef:Assets/Audio/FX/Hit_Metal_03.wav.meta
+AudioImporter:
+  externalObjects: {}
+  serializedVersion: 6
+  defaultSettings:
+    loadType: 0
+    sampleRateSetting: 0
+    sampleRateOverride: 44100
+    compressionFormat: 1
+    quality: 1
+    conversionMode: 0
+  platformSettingOverrides: {}
+  forceToMono: 0
+  normalize: 1
+  preloadAudioData: 1
+  loadInBackground: 0
+  ambisonic: 0
+  3D: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
