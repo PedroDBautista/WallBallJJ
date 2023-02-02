@@ -80,6 +80,8 @@ public class SwordController : MonoBehaviour
             {
                 ballHasBeenHitThisTime = true;
                 hit.transform.GetComponent<Rigidbody2D>().AddForce(((hit.transform.position - this.transform.position) + (player.transform.right) * forwardForce).normalized * kickHitForce, ForceMode2D.Impulse);
+                CameraShake.ShakeCamera(10f,0.1f);
+            
             }
 
             var playerController = player.GetComponent<PlayerController>();
@@ -109,6 +111,7 @@ public class SwordController : MonoBehaviour
                     hit.transform.GetComponent<CircleCollider2D>().isTrigger = false;
                     hit.transform.GetComponent<Rigidbody2D>().AddForce(((hit.transform.position - this.transform.position) + (player.transform.right) * forwardForce).normalized * kickHitForce, ForceMode2D.Impulse);
                     trappedBall = false;
+                    CameraShake.ShakeCamera(10f,0.1f);
                 }else if(ballHasBeenHitThisTime && Input.GetButtonUp("Trap"))
                 {
                     hit.transform.parent = null;
