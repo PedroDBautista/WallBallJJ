@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
-public class CameraShake : MonoBehaviour
+public class CameraShake : SignalHandler
 {
 
     public static CameraShake instance;
@@ -18,10 +18,10 @@ public class CameraShake : MonoBehaviour
         cbmcp = instance.vc.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
     }
 
-    public static void ShakeCamera(float intensity, float time)
+    public void ShakeCamera(float intensity, float time)
     {
-        instance.cbmcp.m_AmplitudeGain = intensity;
-        instance.shakeTimeCount = time;
+        cbmcp.m_AmplitudeGain = intensity;
+        shakeTimeCount = time;
     }
 
     private void Update()
@@ -31,6 +31,16 @@ public class CameraShake : MonoBehaviour
         if(cbmcp.m_AmplitudeGain > 0f && shakeTimeCount <= 0f)
         {
             cbmcp.m_AmplitudeGain = 0f;
+        }
+    }
+
+    public override void ReceiveSignal(string signal)
+    {
+        switch(signal)
+        {
+            case "PlayerKicked":
+                ShakeCamera(10f,0.1f);
+            break;
         }
     }
 

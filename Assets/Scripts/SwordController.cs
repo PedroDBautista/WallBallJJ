@@ -80,7 +80,7 @@ public class SwordController : SignalHandler
             {
                 ballHasBeenHitThisTime = true;
                 hit.transform.GetComponent<Rigidbody2D>().AddForce(((hit.transform.position - this.transform.position) + (player.transform.right) * forwardForce).normalized * kickHitForce, ForceMode2D.Impulse);
-                CameraShake.ShakeCamera(10f,0.1f);
+                SendSignal("PlayerKicked");
             
             }
 
@@ -95,6 +95,7 @@ public class SwordController : SignalHandler
                 hit.transform.GetComponent<Rigidbody2D>().isKinematic = true;
                 hit.transform.GetComponent<CircleCollider2D>().isTrigger = true;
                 trappedBall = true;
+                SendSignal("PlayerTrapped");
             }
             if(trappedBall){
                 if (playerController.jumpState == PlayerController.JumpState.Grounded || playerController.touchingWall)
@@ -111,7 +112,7 @@ public class SwordController : SignalHandler
                     hit.transform.GetComponent<CircleCollider2D>().isTrigger = false;
                     hit.transform.GetComponent<Rigidbody2D>().AddForce(((hit.transform.position - this.transform.position) + (player.transform.right) * forwardForce).normalized * kickHitForce, ForceMode2D.Impulse);
                     trappedBall = false;
-                    CameraShake.ShakeCamera(10f,0.1f);
+                    SendSignal("PlayerKicked");
                 }else if(ballHasBeenHitThisTime && Input.GetButtonUp("Trap"))
                 {
                     hit.transform.parent = null;

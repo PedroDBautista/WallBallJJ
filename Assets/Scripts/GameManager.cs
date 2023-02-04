@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GameManager : SignalHandler
 {
+
     public static GameManager INSTANCE;
     
     public string[] levels = {"MovingWallTestScene","Demo"};

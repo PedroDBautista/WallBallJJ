@@ -155,6 +155,7 @@ public class PlayerController : KinematicObject
                 jumpState = JumpState.Jumping;
                 jump = true;
                 stopJump = false;
+                SendSignal("PlayerJumped");
                 break;
             case JumpState.Jumping:
                 if (!IsGrounded)

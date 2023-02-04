@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class SignalHandler : MonoBehaviour
 {
-    [SerializeField]protected List<SignalHandler> listeners = new List<SignalHandler>();
 
-    public abstract void ReceiveSignal(string signal);
+    [SerializeField] protected List<SignalHandler> listeners;
 
+    public virtual void ReceiveSignal(string signal)
+    {
+
+    }
     protected void SendSignal(string signal)
     {
-        for(int i = 0; i < listeners.Length; i++)
+        for(int i = 0; i < listeners.Count; i++)
         {
             listeners[i].ReceiveSignal(signal);
         }
