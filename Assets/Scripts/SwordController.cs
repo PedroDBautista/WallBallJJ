@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 
 [ExecuteInEditMode]
-public class SwordController : MonoBehaviour
+public class SwordController : SignalHandler
 {
     /// <summary>
     /// How much "up" force is added to the force vector on the ball

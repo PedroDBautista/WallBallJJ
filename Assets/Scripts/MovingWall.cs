@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovingWall : MonoBehaviour
+public class MovingWall : SignalHandler
 {
     public float velocity = 50f;
     public float maxDistance = 100f;
