@@ -45,7 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
-  - MovingWallTestScene
-  - Demo
+  - LevelOne
+  - LevelTwo
+  - LevelThree
+  - LevelFour
   currentLevel: 0
   currentUnlockedLevel: 0

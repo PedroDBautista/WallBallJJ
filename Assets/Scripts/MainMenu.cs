@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Demo");
+        SceneManager.LoadScene(3);
     }
 
     public void GoToMainMenu()
@@ -31,7 +31,7 @@ public class MainMenu : MonoBehaviour
 
     public void LevelSelect()
     {
-        //;   
+        SceneManager.LoadScene("LevelSelectionMenu");
     }
 
     public void RestartDemo()
