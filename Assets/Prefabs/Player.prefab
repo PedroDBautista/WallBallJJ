@@ -76,8 +76,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1931702681
-  m_SortingLayer: 3
+  m_SortingLayerID: 2042134855
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.56037736, g: 0.8174126, b: 1, a: 1}
@@ -149,6 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db9a004882d97845b01218fd858fec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  listeners:
+  - {fileID: 0}
   minGroundNormalY: 0.65
   gravityModifier: 2.5
   velocity: {x: 0, y: 0}
@@ -181,6 +183,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0999f7ae3866994c97d7adbf79729b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  listeners:
+  - {fileID: 0}
+  - {fileID: 0}
   upwardForce: 3
   forwardForce: 1
   lobHitForce: 10
@@ -190,7 +195,7 @@ MonoBehaviour:
   whatIsHittable:
     serializedVersion: 2
     m_Bits: 264
-  player: {fileID: 0}
+  player: {fileID: 2622578639445141234}
 --- !u!114 &2004527755237375998
 MonoBehaviour:
   m_ObjectHideFlags: 0

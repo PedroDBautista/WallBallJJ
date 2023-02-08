@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : SignalHandler
 {
-    public AudioClip[] kick,jump,bounce,trap;
+    public AudioClip[] kick,jump,bounce,trap,goal;
 
     private AudioSource src;
 
@@ -30,6 +30,9 @@ public class SoundManager : SignalHandler
             break;
             case "PlayerTrapped":
                 PlaySoundRandomized(trap);
+            break;
+            case "Goal":
+                PlaySoundRandomized(goal);
             break;
         }
     }

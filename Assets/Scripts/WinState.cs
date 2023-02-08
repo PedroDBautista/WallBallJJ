@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class WinState : MonoBehaviour
+public class WinState : SignalHandler
 {
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -12,6 +12,7 @@ public class WinState : MonoBehaviour
         if (col.gameObject.tag == "Ball")
         {
             Debug.Log("Finished");
+            SendSignal("Goal");
             SceneManager.LoadScene("LevelSelectionMenu");
         }
     }
